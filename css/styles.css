@@ -12,7 +12,7 @@ body {
 /* aos cuman sebagian ajah🗿 */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(20px); /* Geser elemen ke bawah sejauh 20px */
+  transform: translateY(10px); /* Geser elemen ke bawah sejauh 20px */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
@@ -73,9 +73,9 @@ body {
 
 .utama:hover {
   background-image: url('/img/123.gif');
+  background-position-y: 70%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   opacity: 1;
 }
 
@@ -84,14 +84,80 @@ body {
   background-color: #333;
 }
 
+/* scroll */
+.scroll {
+  width: 100%;
+  height: 150px;
+  background-image: url('/img/downarrow.png');
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 35%;
+  
+}
 
 
+.scroll:hover {
+  background-image: url('/img/downarrow.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 35%;
+}
+
+/* Profile */
+.profile {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(99, 99, 99);
+  display: flex;
+  padding-top: 2%;
+}
+
+.profile img {
+  border: solid 2px #333;
+  height: 150px;
+  border-radius: 10%;
+  transition: .7s;
+  margin-left: 50px;
+}
+
+.profile img:hover {
+  transform: translateY(-10px);
+  box-shadow: #ad2b2b 10px 10px, 1px;
+}
+
+.profile p {
+  font-size: larger;
+  line-height: 1.5;
+  text-align: left;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding-right: 30%;
+}
+
+.profile div{
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+/* Project Style */
+.project {
+  background-color: #ad2b2b;
+  width: 100%;
+  height: 400px;
+}
+.project .overview {
+  display: flex;
+}
 /* Footer Style */
 .footer{
   background-color: #000000;
   color: white;
   height: 40px;
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 .footer p {
   padding-top: 10px;
@@ -112,12 +178,41 @@ body {
 /* Responsive */
 * ukuran tablet */
 @Media screen and (max-width: 768px) {
-    
+  /* scroll */
+  .scroll {
+    background-position-x: :-30px;
+
+  }
+  /* Profile */
+  .profile {
+
+  }
+  .profile p {
+    padding-right: 0;
+    font-size: medium;
+  }
+
 }
 
 /* ukuran mobile */
 @media screen and (max-width: 576px){
-
+  /* scroll */
+  .scroll {
+    background-position-x: center;
+    background-size: 99%;
+  }
+  .scroll:hover {
+    background-position-x: center;
+    background-size: 99%;
+  }
+  /* Profile */
+  .profile {
+    padding-left: 0;
+  }
+  .profile p {
+    padding-right: 0;
+    font-size: medium;
+  }
 }
 /*kumpulan animasi */
 
