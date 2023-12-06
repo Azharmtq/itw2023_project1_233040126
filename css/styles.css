@@ -6,9 +6,12 @@
 /* Style Dasar*/
 body {
   font-family: 'roboto';
-  background-color: #333;
-  position: relative;
 }
+
+p, a {
+  animation: slide-in .5s;
+}
+
 /* aos cuman sebagian ajah🗿 */
 .animate-on-scroll {
   opacity: 0;
@@ -60,65 +63,70 @@ body {
   background-color: #ad2b2b;
 }
 
-/* Halaman Pembuka */
-.utama {
-  width: 100%;
-  height: 400px;
-  background-image: url('/img/utama.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 1;
+.topnav a:nth-child(6):hover {
+  background-color: #000;
 }
 
-.utama:hover {
-  background-image: url('/img/123.gif');
-  background-position-y: 70%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  opacity: 1;
-}
+/* Navbar  */
 
 /* Sontainer Style */
 .container{
   background-color: #333;
 }
 
-/* scroll */
-.scroll {
+/* Halaman Pembuka */
+.utama {
   width: 100%;
-  height: 150px;
-  background-image: url('/img/downarrow.png');
-  background-color: #000;
-  background-repeat: no-repeat;
+  height: 80vh;
+  background-image: url('/img/utama.png');
   background-size: cover;
-  background-position-y: 35%;
-  
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-
-.scroll:hover {
-  background-image: url('/img/downarrow.gif');
-  background-repeat: no-repeat;
+.utama:hover {
+  background-image: url('/img/utama.gif');
+  background-position-y: 70%;
   background-size: cover;
-  background-position-y: 35%;
+  background-repeat: no-repeat;
 }
 
 /* Profile */
 .profile {
   width: 100%;
-  height: 200px;
+  height: 85vh;
   background-color: rgb(99, 99, 99);
   display: flex;
-  padding-top: 2%;
+  padding-top: 8vh;
 }
 
 .profile img {
   border: solid 2px #333;
-  height: 150px;
+  height: 30vh;
   border-radius: 10%;
-  transition: .7s;
+  transition: .5s;
   margin-left: 50px;
+}
+
+.titlename {
+  width: 15vh;
+  text-align: center;
+  border-radius: 2vh;
+  color: #000000;
+  background-color: white;
+  margin-left: 30%;
+  transition: .6s;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.titlename p {
+  margin-left: -25px;
+  margin-top: -15px;
+  margin-right: -15px;
+  line-height: 0;
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: smaller;
 }
 
 .profile img:hover {
@@ -126,8 +134,13 @@ body {
   box-shadow: #ad2b2b 10px 10px, 1px;
 }
 
+.profile img:hover ~ .titlename {
+  transform: translateY(-50px);
+  opacity: 1;
+}
+
 .profile p {
-  font-size: larger;
+  font-size: medium;
   line-height: 1.5;
   text-align: left;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -138,31 +151,139 @@ body {
   padding-left: 40px;
   padding-top: 20px;
 }
+/* overlay */
+.overlay {
+  position: fixed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.5s;
+  text-align: center;
+  padding: 100px 0 0;
+}
 
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay img {
+  max-height: 100%;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+}
+
+.overlay:target img {
+  animation: zoomDanFade 1s;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -20px;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  line-height: 14px;
+  padding: 5px;
+  opacity: 0;
+}
+
+.overlay:target .close {
+  animation: slidedownfade .5s .5s forwards;
+}
 /* Project Style */
 .project {
-  background-color: #ad2b2b;
+  background-color: #c4c4c4;
   width: 100%;
-  height: 400px;
+  height: 60vh;
+  overflow-x: hidden;
+  padding: 3vh 0;
 }
 .project .overview {
   display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.overview img {
+  width: auto;
+  height: 20vh;
+  margin-top: 3vh;
+}
+
+/* Skill Style */
+.skill {
+  display: flex;
+  justify-content: center;
+  gap: 10vh;
+  height: max-content;
+  background-color: rgb(97, 105, 105);
+}
+
+.skill ul{
+  text-align: left;
+  margin-left: 5vh;
+  line-height: 5vh;
+  font-family: Impact;
+  font-size: larger;
+}
+
+.box {
+  width: 300px;
+  height: max-content;
+  border: #ad2b2b 2px solid;
+  margin-top: 5vh;
+  transition: .7s;
+  padding: 5vh 0vh;
+  margin-bottom: 15vh;
+  border-radius: 7vh;
+}
+
+.box h2{
+  text-align: center;
+  margin-top: -4vh;
+}
+
+.box img{
+  width: auto;
+  height: 20vh;
+  position:relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box:hover{
+  background-color: white;
+  transform: translateY(-5vh);
 }
 /* Footer Style */
 .footer{
   background-color: #000000;
   color: white;
-  height: 40px;
+  height: 5vh;
+  width: 100%;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   position: fixed;
   bottom: 0;
-  width: 100%;
-}
-.footer p {
-  padding-top: 10px;
+  padding-top: 1vh;
 }
 
+.footer p {
+}
 
 /* animasi jika a di click */
 
@@ -176,23 +297,6 @@ body {
 }
 
 /* Responsive */
-* ukuran tablet */
-@Media screen and (max-width: 768px) {
-  /* scroll */
-  .scroll {
-    background-position-x: :-30px;
-
-  }
-  /* Profile */
-  .profile {
-
-  }
-  .profile p {
-    padding-right: 0;
-    font-size: medium;
-  }
-
-}
 
 /* ukuran mobile */
 @media screen and (max-width: 576px){
@@ -200,6 +304,7 @@ body {
   .scroll {
     background-position-x: center;
     background-size: 99%;
+    height: 90px;
   }
   .scroll:hover {
     background-position-x: center;
