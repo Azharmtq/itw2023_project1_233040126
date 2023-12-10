@@ -6,22 +6,17 @@
 /* Style Dasar*/
 body {
   font-family: 'roboto';
+  scroll-behavior: smooth;
 }
 
 p, a {
   animation: slide-in .5s;
 }
 
-/* aos cuman sebagian ajah🗿 */
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(10px); /* Geser elemen ke bawah sejauh 20px */
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.animate-on-scroll.animate {
-  opacity: 1;
-  transform: translateY(0);
+h1, h2 {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 1500;
 }
 
 /* Background Navbar */
@@ -29,14 +24,29 @@ p, a {
 .topnav {
   background-color: #000000;
   position: fixed;
-  height: 40px;
   width: 100%;
   z-index: 1;
   font-family: 'Hacked';
+  height: 7.3vh;
 }
 
 
 /* Logo style */
+
+.topnav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: .8s;
+}
+
+.topnav a:hover::after {
+  opacity: 1;
+  width: 100%;
+}
 
 .topnav a:last-child {
   float: right;
@@ -69,7 +79,7 @@ p, a {
 
 /* Navbar  */
 
-/* Sontainer Style */
+/* Container Style */
 .container{
   background-color: #333;
 }
@@ -96,7 +106,6 @@ p, a {
   width: 100%;
   height: 85vh;
   background-color: rgb(99, 99, 99);
-  display: flex;
   padding-top: 8vh;
 }
 
@@ -104,53 +113,50 @@ p, a {
   border: solid 2px #333;
   height: 30vh;
   border-radius: 10%;
-  transition: .5s;
-  margin-left: 50px;
+  transition: .7s;
+  margin-left: 50%;
+  transform: translate(-50%, 10px);
 }
 
 .titlename {
-  width: 15vh;
-  text-align: center;
-  border-radius: 2vh;
+  width: 125px;
+  height: 40px;
   color: #000000;
-  background-color: white;
-  margin-left: 30%;
-  transition: .6s;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
   opacity: 0;
-  transform: translateY(-20px);
+  transition: .7s;
+  font-family: Arial;
+  margin-left: 50%;
+  transform: translate(-50%, -30px);
 }
 
-.titlename p {
-  margin-left: -25px;
-  margin-top: -15px;
-  margin-right: -15px;
-  line-height: 0;
-  font-family: Arial, Helvetica, sans-serif ;
-  font-size: smaller;
+.titlename p{
+  font-weight: bolder;
+  font-style: normal;
+  text-align: center;
+  transform: translate(0, 50%);
 }
 
 .profile img:hover {
-  transform: translateY(-10px);
-  box-shadow: #ad2b2b 10px 10px, 1px;
+  transform: translate(-50%, -10px);
+  box-shadow: #523434 1px 1px, 2px 2px;
 }
 
 .profile img:hover ~ .titlename {
-  transform: translateY(-50px);
   opacity: 1;
+  transform: translate(-50%, -70px);
+  background-color: white;
 }
 
 .profile p {
   font-size: medium;
   line-height: 1.5;
-  text-align: left;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  padding-right: 30%;
+  text-align: center;
+  font-family: 'Trebuchet MS';
 }
 
-.profile div{
-  padding-left: 40px;
-  padding-top: 20px;
-}
+
 /* overlay */
 .overlay {
   position: fixed;
@@ -194,7 +200,7 @@ p, a {
   border: 1px solid white;
   line-height: 14px;
   padding: 5px;
-  opacity: 0;
+  opacity: 1;
 }
 
 .overlay:target .close {
@@ -204,18 +210,18 @@ p, a {
 .project {
   background-color: #c4c4c4;
   width: 100%;
-  height: 60vh;
-  overflow-x: hidden;
-  padding: 3vh 0;
+  height: 100vh;
+  padding: 10vh 0;
 }
 .project .overview {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  align-content: center;
+  display: grid;
+  gap: 2vh 2vh;
+  grid-template-columns: 40vh 40vh 40vh;
+  grid-template-rows: 40vh 40vh;
   text-align: center;
-  align-items: center;
   margin-top: 3vh;
+  align-items: center;
+  align-content: center;
 }
 
 .overview img {
@@ -224,6 +230,15 @@ p, a {
   margin-top: 3vh;
 }
 
+.overview div{
+  transition: 1s;
+}
+
+.overview div:hover {
+  border: solid 1px black;
+  box-shadow: 0 0 20px 5px #ffd700, /* yellow glow */
+  inset 0 0 10px 2px #1a1a1a; 
+}
 /* Skill Style */
 .skill {
   display: flex;
@@ -231,6 +246,7 @@ p, a {
   gap: 10vh;
   height: max-content;
   background-color: rgb(97, 105, 105);
+  padding-top: 10vh;
 }
 
 .skill ul{
@@ -269,6 +285,16 @@ p, a {
   background-color: white;
   transform: translateY(-5vh);
 }
+
+/* Contact */
+
+.contact {
+  height: 70vh;
+  display: flex;
+}
+.box-contact {
+  padding: 15vh 0;
+}
 /* Footer Style */
 .footer{
   background-color: #000000;
@@ -282,43 +308,27 @@ p, a {
   padding-top: 1vh;
 }
 
-.footer p {
-}
-
 /* animasi jika a di click */
 
 
 /* Font */
 @font-face {
-  font-family: 'Trajan Pro';
-  src: url('../fonts/Trajan\ Pro.ttf');
-  font-family: 'Trajan Pro Bold';
-  src: url('../fonts/TrajanPro-Bold.otf');
+  font-family: Hacked;
+  src: url('../img/fonts/"HACKED.ttf"');
+  font-family: Poppins;
+  src: url('../img/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Hacked;
+  src: url(https://hackedfont.com/HACKED.ttf);
 }
 
 /* Responsive */
 
 /* ukuran mobile */
 @media screen and (max-width: 576px){
-  /* scroll */
-  .scroll {
-    background-position-x: center;
-    background-size: 99%;
-    height: 90px;
-  }
-  .scroll:hover {
-    background-position-x: center;
-    background-size: 99%;
-  }
-  /* Profile */
-  .profile {
-    padding-left: 0;
-  }
-  .profile p {
-    padding-right: 0;
-    font-size: medium;
-  }
-}
+  
 /*kumpulan animasi */
 
 @keyframes bounce {
