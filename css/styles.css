@@ -220,8 +220,7 @@ h1, h2 {
   grid-template-rows: 40vh 40vh;
   text-align: center;
   margin-top: 3vh;
-  align-items: center;
-  align-content: center;
+  justify-content: center;
 }
 
 .overview img {
@@ -308,8 +307,6 @@ h1, h2 {
   padding-top: 1vh;
 }
 
-/* animasi jika a di click */
-
 
 /* Font */
 @font-face {
@@ -356,7 +353,7 @@ h1, h2 {
   }
 }
 
-@keyframes fade-infull{
+@keyframes fade-in{
   /* Keadaan awal: elemen transparan dan berada di bawah */
   0% {
     opacity: 0;
