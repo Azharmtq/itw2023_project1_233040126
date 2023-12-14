@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   color: white;
+  transition: .2s;
 }
 /* Style Dasar*/
 html {
@@ -119,7 +120,6 @@ h1, h2 {
   height: 30vh;
   border-radius: 10%;
   transition: .8s;
-  margin-left: 45%;
 }
 
 .titlename {
@@ -130,15 +130,14 @@ h1, h2 {
   opacity: 0;
   transition: .7s;
   font-family: Arial;
-  margin-left: 50%;
-  transform: translate(-50%, -30px);
+  transform: translate(0, 0);
 }
 
 .titlename p{
   font-weight: bolder;
   font-style: normal;
   text-align: center;
-  transform: translate(0, 50%);
+  transform: translate(0, 0);
 }
 
 .profile img:hover {
@@ -150,7 +149,7 @@ h1, h2 {
 
 .profile img:hover ~ .titlename {
   opacity: 1;
-  transform: translate(-50%, -70px);
+  transform: translate(0, -50px);
 }
 
 .profile p {
