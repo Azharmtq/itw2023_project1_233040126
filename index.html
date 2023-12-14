@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <title>My Portofolio</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header id="Navigasi">
@@ -26,47 +27,50 @@
         <div class="utama" id="Home"></div>
             <div class="profile" id="profile">
                 <div>
-                    <a href="#myphotos"><img src="/img/aiprofile.jpeg" alt="FOTO SAYA">
+                    <a href="#myphotos"><img src="/img/aiprofile.jpeg" alt="FOTO SAYA" data-aos="fade-up">
                         <div class="titlename">
-                            <p>Azharmtq</p>
+                            <p>Click Here</p>
                         </div>
                     </a>
                 </div>
-                <div>
+                <div data-aos="fade-up"
+                data-aos-duration="3000">
                     <h2>Azhar Muttaqien,Calon Ilmuwan, Hacker, dan White Hat</h2>
                     <p>Merupakan Mahasiswa jurusan informatika yang sedang berkuliah di universitas pasundan</p>
                 </div>
             </div>
-        <div class="project" id="project">
-           <h1>MY Project</h1>
+        <div class="project" id="project" data-aos="fade-up">
+           <h1 data-aos="fade-right">MY Project</h1>
             <div class="overview">
-                <div>
+                <div data-aos="fade-up">
                     <h2>Coreldraw</h2>
                     <a href=""><img src="/img/icon/coreldraw.png" alt="here"></a>
                 </div>
-                <div>
+                <div data-aos="fade-down">
                     <h2>Adobe Photoshop</h2>
                     <img src="/img/icon/Photoshop.png" alt="Here">
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <h2>Adobe Premiere</h2>
                     <img src="/img/icon/Premiere.png" alt="here">
                 </div>
-                <div>
+                <div data-aos="fade-down">
                     <h2>Adobe After Effect</h2>
                     <img src="/img/icon/Effect.png" alt="Here">
                 </div>
-                <div>
+                <div data-aos="fade-up">
                     <h2>Filmora</h2>
                     <img src="/img/icon/Filmora.png" alt="here">
                 </div>
-                <div>
+                <div data-aos="fade-down">
                     <h2>SketchUp</h2>
                     <img src="img/icon/Sketchup.png" alt="Here">
                 </div>
             </div>
         </div>
-        <div class="skill" id="skill">
+        <div class="skill" id="skill" data-aos="fade-down">
+           <center><h1>My Skill</h1></center>
+           <div class="box-skill">
             <div class="box">
                 <h2>Designer</h2>
                 <img src="/img/icon/Designer.png" alt="">
@@ -85,6 +89,7 @@
                     <li>JS</li>
                 </ul>
             </div>
+        
             <div class="box">
                 <h2>Network</h2>      
                 <img src="/img/icon/Network.png" alt="">   
@@ -95,20 +100,26 @@
                 </ul>
             </div>
         </div>
+        </div>
         <div class="contact" id="contact">
-            <div class="box-contact">
-                    <label for="Username">Username</label>
-                    <label for=":">:</label>
-                  <input type="Username">
-                  <p>E-mail :</p>
-                 <input type="email" name="Password">
-                <p>Saran & Kritik :</p>
-                <textarea name="Profil" id="Profil" cols="40" rows="8"></textarea>
-            </div>
+            <h1 data-aos="fade-down">Contact</h1>
+            <form name="submit-form" data-aos="fade-down">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required=""><br>
+                <label for="nama">Nama:</label>
+                <input type="text" id="name" name="name" required=""><br>
+                <label for="msg">Pesan:</label>
+                <textarea name="msg" id="" cols="50" rows="8" required=""></textarea>
+                <button type="submit" class="button-send" data-aos="fade-up">Submit</button>
+            </form>
         </div>
     </div>
     <div class="footer">
         <p>Copyright Azhar &copy; 2023.</p>
     </div>
+    <script>
+        AOS.init();
+      </script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
