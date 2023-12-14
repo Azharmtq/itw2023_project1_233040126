@@ -304,7 +304,7 @@ h1, h2 {
 .contact {
   height: 40vh;
   color: #000000;
-  padding: 50vh 35vh;
+  padding: 50vh 0;
 }
 
 .contact input, .contact textarea {
@@ -315,6 +315,8 @@ form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  width: max-content;
+  text-align: left;
 }
 
 .contact form button {
@@ -322,9 +324,8 @@ form {
   border: solid 2px#ffffff;
   border-radius: 10px;
   height: 5vh;
-  width: 30%;
+  width: 10vh;
   margin-top: 10px;
-  margin-left: 55vh;
   transition: 1s;
 }
 
