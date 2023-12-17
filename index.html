@@ -7,62 +7,91 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header id="Navigasi">
-        <div class="topnav">
-            <a href="#Home">Home</a>
-            <a href="/profile.html">Profile</a>
-            <a href="#project">Project</a>
-            <a href="#skill">Skill</a>
-            <a href="#contact">Contact</a>
-            <a href=""><img src="img/Logo.png" alt=""></a>
-          </div>
+
+        <nav>
+            <div class="Logo">
+                <a href=""><img src="img/Logo.png" alt=""></a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
     <div class="overlay" id="myphotos">
         <a href="#" class="close">x close</a>
         <img src="/img/overlay.gif" alt="myphotos">
     </div>
     <div class="container">
-        <div class="utama" id="Home"></div>
-          <center><div class="profile" id="profile">
-                <div>
-                    <a href="#myphotos"><img src="/img/aiprofile.jpeg" alt="FOTO SAYA" data-aos="fade-up">
-                        <div class="titlename">
-                            <p>Click Here</p>
-                        </div>
-                    </a>
-                </div>
-                <div data-aos="fade-up"
-                data-aos-duration="3000">
+        <div class="utama" id="home"></div>
+          <div class="profile" id="profile">
+            <center><div>
+                <a href="#myphotos"><img src="/img/aiprofile.jpeg" alt="FOTO SAYA">
+                    <div class="titlename">
+                        <p>Click Here</p>
+                    </div>
+                </a>
+            </div></center>
+                <div data-aos="fade-up">
                     <h2>Azhar Muttaqien,Calon Ilmuwan, Hacker, dan White Hat</h2>
                     <p>Merupakan Mahasiswa jurusan informatika yang sedang berkuliah di universitas pasundan</p>
                 </div>
-            </div></center>
+                <div class="myprofile">
+                    <div data-aos="fade-right"><p>Edukasi
+                        <ul>
+                            <li>SDIT Luqmanul Hakim</li>
+                            <li>SD Al-Muqoddasah</li>
+                            <li>SMP Al-Muqoddasah</li>
+                            <li>SMA Al-Muqoddasah</li>
+                        </ul>
+                    </p></div>
+                    <div data-aos="fade-left"><p>Pengalaman
+                        <ul>
+                            <li>Pengurus Asrama SD 2020-2021</li>
+                            <li>Bagian Sekretaris Ma'had 2021-2022</li>
+                            <li>Bagian Bendahara Ma'had 2021-2022</li>
+                            <li>Bendahara Public Speaking 2018-2019</li>
+                        </ul>
+                    </p></div>
+                </div>
+            </div>
         <div class="project" id="project" data-aos="fade-up">
-           <h1 data-aos="fade-right">MY Project</h1>
+           <h1>MY Project</h1>
             <div class="overview">
-                <div data-aos="fade-up">
-                    <h2>Coreldraw</h2>
+                <div data-tilt data-tilt-max="40" data-tilt-speed="2000" data-tilt-perspective="500">
+                    <h2 >Coreldraw</h2>
                     <a href=""><img src="/img/icon/coreldraw.png" alt="here"></a>
                 </div>
-                <div data-aos="fade-down">
-                    <h2>Adobe Photoshop</h2>
+                <div data-tilt data-tilt-max="40" data-tilt-speed="2000" data-tilt-perspective="500">
+                    <h2>Photoshop</h2>
                     <img src="/img/icon/Photoshop.png" alt="Here">
                 </div>
-                <div data-aos="fade-up">
-                    <h2>Adobe Premiere</h2>
+                <div data-tilt data-tilt-max="40" data-tilt-speed="2000" data-tilt-perspective="500">
+                    <h2>Premiere</h2>
                     <img src="/img/icon/Premiere.png" alt="here">
                 </div>
-                <div data-aos="fade-down">
-                    <h2>Adobe After Effect</h2>
+                <div data-tilt data-tilt-max="40" data-tilt-speed="2000" data-tilt-perspective="500">
+                    <h2>After Effect</h2>
                     <img src="/img/icon/Effect.png" alt="Here">
                 </div>
-                <div data-aos="fade-up">
+                <div data-tilt data-tilt-max="40" data-tilt-speed="2000" data-tilt-perspective="500">
                     <h2>Filmora</h2>
                     <img src="/img/icon/Filmora.png" alt="here">
                 </div>
-                <div data-aos="fade-down">
+                <div data-tilt data-tilt-max="40" data-tilt-speed="2000" data-tilt-perspective="500">
                     <h2>SketchUp</h2>
                     <img src="img/icon/Sketchup.png" alt="Here">
                 </div>
@@ -104,22 +133,43 @@
         <div class="contact" id="contact">
            <h1 data-aos="fade-down">Contact</h1>
            <center><form name="submit-form" data-aos="fade-down">
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required=""><br>
-                <label for="nama">Nama:</label>
-                <input type="text" id="name" name="name" required=""><br>
-                <label for="msg">Pesan:</label>
-                <textarea name="msg" id="" cols="50" rows="8" required=""></textarea>
-                <button type="submit" class="button-send" data-aos="fade-up">Submit</button>
+                <label for="Email">Email:</label>
+                <input id="Email" type="text" name="Email" type="email" placeholder="Example@mail.com" required><br>
+                <label for="Username">Nama:</label>
+                <input id="Username" name="Username" type="text" placeholder="Username"><br>
+                <label for="Message">Pesan:</label>
+                <textarea name="Message" id="Message" placeholder="Pesan" required></textarea>
+                <button type="submit" data-aos="fade-up">Submit</button>
             </form></center>
+            <center><div>
+                <a href="https://www.facebook.com/azhar.sys.10"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UC1XvXoTWTnO3-49nPeWhwRQ"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/azharmtq/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/azhar-muttaqien-78a952291/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/qr/PXB72KJ67XBTM1 "><i class="fab fa-whatsapp"></i></a>
+            </div></center>
         </div>
     </div>
     <div class="footer">
-        <p>Copyright Azhar &copy; 2023.</p>
+        <p>0878-0352-8486 | azharsss457@gmail.com</p>
     </div>
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
     <script>
         AOS.init();
       </script>
+      <script src="jquery.js" ></script> <!-- Load jQuery first -->
+      <script src="tilt.js"></script> <!-- Load Tilt.js library -->
     <script src="/js/script.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwC6K_dO_lMCHiY2e4V8jgUGJour30NCdSk1Kr1zkJZUqpSZX4OCMAuuxwa6wIUEaRgJQ/exec'
+        const form = document.forms['submit-form']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
