@@ -137,6 +137,11 @@ nav ul li a:hover{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  transition: ease-in-out 1s;
+}
+
+.utama:hover {
+  filter: brightness(1) saturate(1) hue-rotate(180deg);
 }
 
 /* Profile */
