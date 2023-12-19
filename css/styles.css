@@ -560,6 +560,7 @@ nav ul li a:hover{
 
   .overview div h2 {
     padding-top: 2vh;
+    font-size: medium;
   } 
   .overview div img {
     margin-top: 2vh;
@@ -598,6 +599,19 @@ nav ul li a:hover{
     margin-top: 5vh;
   }
 
+  .bg-skill {
+    margin-top: -20vh;
+    padding-top: 10vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/skill.gif');
+    filter: brightness(0.4);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -100;
+  }
 
 }
 
