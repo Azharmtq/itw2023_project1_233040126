@@ -649,4 +649,24 @@ nav ul li a:hover{
   .myprofile div{
     width: 50vh;
   }
+
+  /* Contact */
+.contact {
+  width: 100%;
+}
+
+.contact form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: max-content;
+  padding-left: 3vh;
+  padding-right: 3vh;
+  padding-top: 0vh;
+  border-radius: 2vh;
+  color: white;
+}
+  .contact div .fab {
+    scale: 2.5;
+  }
 }
