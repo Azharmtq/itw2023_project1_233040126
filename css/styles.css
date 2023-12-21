@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 h1, h2 {
   text-align: center;
   font-family: 'Trebuchet MS';
@@ -33,6 +37,10 @@ nav .Logo {
   margin-top: 2vh;
   margin-left: 2vh;
 }
+nav .Logo a img{
+  width: 50px;
+  height: auto;
+}
 
 nav ul {
   float: right;
@@ -51,7 +59,7 @@ nav ul li a{
   color: #a7a7a7;
   text-decoration: none;
   font-family: poppins;
-  font-weight: 1500;
+  font-weight: 1000;
   font-size: 20px;
 }
 nav ul li a::after{
@@ -427,7 +435,7 @@ nav ul li a:hover{
 }
 
 .contact form input {
-  width: 50vh;
+  width: 70vh;
   height: 3vh;
 }
 .contact form button {
@@ -679,5 +687,13 @@ nav ul li a:hover{
 
   .myprofile div{
     width: 50vh;
+  }
+  .contact form textarea {
+    height: 20vh;
+  }
+  
+  .contact form input {
+    width: 40vh;
+    height: 3vh;
   }
 }
