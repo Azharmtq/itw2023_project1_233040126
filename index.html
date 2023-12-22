@@ -133,9 +133,9 @@
         </div>
         <div class="contact" id="contact">
            <h1 data-aos="fade-down">Contact</h1>
-           <center><form name="submit-form" data-aos="fade-down">
+           <center><form name="submit-form" data-aos="fade-down" id="submit-form">
                 <label for="Email">Email:</label>
-                <input id="Email" type="text" name="Email" type="email" placeholder="Example@mail.com" required><br>
+                <input id="Email" type="email" name="Email" type="email" placeholder="Example@mail.com" required><br>
                 <label for="Username">Nama:</label>
                 <input id="Username" name="Username" type="text" placeholder="Username"><br>
                 <label for="Message">Pesan:</label>
@@ -162,15 +162,35 @@
       <script src="tilt.js"></script> <!-- Load Tilt.js library -->
     <script src="/js/script.js"></script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwC6K_dO_lMCHiY2e4V8jgUGJour30NCdSk1Kr1zkJZUqpSZX4OCMAuuxwa6wIUEaRgJQ/exec'
-        const form = document.forms['submit-form']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwC6K_dO_lMCHiY2e4V8jgUGJour30NCdSk1Kr1zkJZUqpSZX4OCMAuuxwa6wIUEaRgJQ/exec';
+        const form = document.forms['submit-form'];
+
+        form.addEventListener('submit', async e => {
+        e.preventDefault(); // Menghentikan aksi formulir default
+
+        // Mendapatkan waktu saat ini
+        const timestamp = new Date().toLocaleString();
+
+        try {
+            // Menambahkan timestamp ke FormData
+            const formData = new FormData(form);
+            formData.append('Timestamp', timestamp);
+
+            const response = await fetch(scriptURL, { method: 'POST', body: formData });
+
+            if (response.ok) {
+            console.log('Success!', response);
+            alert('Formulir berhasil dikirim!');
+            form.reset(); // Mereset formulir setelah berhasil dikirim
+            } else {
+            console.error('Gagal mengirim formulir. Kode status:', response.status);
+            alert('Terjadi kesalahan saat mengirim formulir.');
+            }
+        } catch (error) {
+            console.error('Error!', error.message);
+            alert('Terjadi kesalahan saat mengirim formulir.');
+        }
+        });
       </script>
 </body>
 </html>
