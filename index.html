@@ -38,13 +38,16 @@
     <div class="container">
         <div class="utama" id="home"></div>
           <div class="profile" id="profile">
-            <center><div>
-                <a href="#myphotos"><img src="/img/aiprofile.jpeg" alt="FOTO SAYA">
-                    <div class="titlename">
-                        <p>Click Here</p>
+            <center>
+                <div class="myphotos">
+                    <a href="#myphotos">
+                    <div class="image"></div>
+                    <div class="overlay2">
+                    <div class="text">Click Here</div>
                     </div>
-                </a>
-            </div></center>
+                    </a>
+                </div>
+            </center>
                 <div data-aos="fade-up">
                     <h2>Azhar Muttaqien,Calon Ilmuwan, Hacker, dan White Hat</h2>
                     <p>Merupakan Mahasiswa jurusan informatika yang sedang berkuliah di universitas pasundan</p>
@@ -164,13 +167,9 @@
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwC6K_dO_lMCHiY2e4V8jgUGJour30NCdSk1Kr1zkJZUqpSZX4OCMAuuxwa6wIUEaRgJQ/exec';
         const form = document.forms['submit-form'];
-
         form.addEventListener('submit', async e => {
         e.preventDefault(); // Menghentikan aksi formulir default
-
-        // Mendapatkan waktu saat ini
-        const timestamp = new Date().toLocaleString();
-
+        const timestamp = new Date().toLocaleString();// Mendapatkan waktu saat ini
         try {
             // Menambahkan timestamp ke FormData
             const formData = new FormData(form);

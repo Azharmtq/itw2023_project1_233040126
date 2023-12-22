@@ -160,41 +160,52 @@ nav ul li a:hover{
   padding-top: 20vh;
   color: white;
 }
-
-.profile img {
-  border: solid 2px #333;
+.myphotos {
+  position: relative;
+  overflow: hidden;
+  width: 30vh;
   height: 30vh;
-  border-radius: 10%;
-  transition: .8s;
+  border-radius: 30vh;
+
 }
 
-.titlename {
-  width: 125px;
-  height: 40px;
-  color: #000000;
-  border-radius: 10px;
-  opacity: 0;
-  transition: .7s;
-  font-family: Arial;
-  transform: translate(0, 0);
+.image {
+  width: 100%;
+  height: 100%;
+  background: url('/img/aiprofile.jpeg');
+  background-size: cover;
+  transition: filter 0.5s;
+  background-position: center;
 }
 
-.titlename p{
-  font-weight: bolder;
-  font-style: normal;
+.overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  transform: translateY(-5vh);
+  transform: translateY(100%);
+  opacity: 0;
+  background: linear-gradient(rgba(255, 26, 26, 0), rgba(255, 48, 48, 0.8));
+  transition: opacity 0.7s, transform 1s;
 }
 
-.profile img:hover {
-  box-shadow: 0 0 20px 5px #ababab,
-  inset 0 0 10px 2px #1a1a1a;
-  transform: translateY(-5vh);
+.myphotos:hover .image {
+  filter: brightness(0.7);
 }
 
-.profile img:hover ~ .titlename {
+.myphotos:hover .overlay2 {
+  transform: translateY(0);
   opacity: 1;
-  transform: translate(0, -50px);
+}
+.text {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .profile div p {
@@ -273,7 +284,7 @@ nav ul li a:hover{
 }
 /* Project Style */
 .project {
-  background-color: #fffffe;
+  background-image: radial-gradient(at 100vh -100vh,rgba(255, 255, 255, 1),rgb(0, 0, 0));
   width: 100%;
   height: max-content;
   padding: 10vh 0;
@@ -281,6 +292,7 @@ nav ul li a:hover{
 
 .project h1 {
   color: #0f0e17;
+  text-shadow: 1px 1px 4px #020202, 2px 2px 1px #ffffff;
 }
 .project .overview {
   display: flex;
@@ -338,6 +350,7 @@ nav ul li a:hover{
   padding-top: 10vh;
   color: #fffffe;
   min-height: 100vh;
+  text-shadow: -2px -2px 4px #020202, 2px 2px 4px #ffffff;
 }
 
 .bg-skill {
@@ -466,13 +479,13 @@ nav ul li a:hover{
 }
 
 .contact div .fab {
-  color: #0f0e17;
+  color: rgb(135, 225, 252,0.6);
   scale: 3;
-  transition: ease-in-out 0.7s;
+  transition: 0.7s;
 }
 
 .contact div .fab:hover{
-  color: #22f0ff;
+  color: rgb(135, 225, 252,1);
 }
 /* Footer Style */
 .footer{
